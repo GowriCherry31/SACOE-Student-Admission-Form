@@ -1,43 +1,50 @@
-DSACE Student Admission Registration Form – Real-Time Auto-Save
-Project Overview
+SACOE Student Admission Registration Form – Real-Time Auto-Save
 
-This project is a web-based student admission registration form for Dr. Sivanthi Aditanar College of Engineering.
+Project Overview:
 
-Includes real-time auto-save functionality to prevent data loss.
 
-Shows a Thank You page after submission confirming successful registration.
+1.This project is a web-based student admission registration form for Dr. Sivanthi Aditanar College of Engineering.
 
-Fully responsive design suitable for desktops, laptops, tablets, and mobile devices.
+2.Includes real-time auto-save functionality to prevent data loss.
 
-Features
+3.Shows a Thank You page after submission confirming successful registration.
+
+4.Fully responsive design suitable for desktops, laptops, tablets, and mobile devices.
+
+
+Features:
 
 Homepage:
 
-Displays college name with professional background.
+1.Displays college name with professional background.
 
-“Get Started” button to navigate to the form.
+2.“Get Started” button to navigate to the form.
 
-Student Registration Form:
+3.Student Registration Form:
 
-Captures Name, Email, Phone, Gender, Date of Birth, Course, and Address.
+4.Captures Name, Email, Phone, Gender, Date of Birth, Course, and Address.
 
-Courses include CSE, AI&DS, IT, ECE, EEE, Mech, Civil.
+5.Courses include CSE, AI&DS, IT, ECE, EEE, Mech, Civil.
+
 
 Real-Time Auto-Save:
 
-Automatically saves input in browser localStorage.
+1.Automatically saves input in browser localStorage.
 
-Data persists even if the page is reloaded.
+2.Data persists even if the page is reloaded.
+
 
 Thank You Page:
 
 Confirms registration with a graduation background image.
 
+
 Responsive Design:
 
 Works on desktops, laptops, tablets, and mobiles.
 
-Technology Stack
+Technology Stack:
+
 
 Frontend: HTML5, CSS3, JavaScript
 
@@ -45,18 +52,18 @@ Storage: Browser localStorage (no backend required)
 
 Fonts: Google Fonts (Poppins)
 
-Setup & Usage
 
-Clone or Download Repository
+Setup & Usage:
 
-Open the Project:
 
-Open the index.html file in any modern web browser (Chrome, Firefox, Edge).
+1.Clone or Download Repository
 
-Use the Form:
+2.Open the Project:
 
-Fill in the student details.
+3.Open the index.html file in any modern web browser (Chrome, Firefox, Edge).
 
-Data is saved automatically in real-time.
+4.Use the Form: Fill in the student details.
+
+5.Data is saved automatically in real-time.
 
 Click Submit to view the Thank You page.
