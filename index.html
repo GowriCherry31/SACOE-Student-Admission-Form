@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSACE Student Admission Registration - Auto-Save</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body,html{margin:0;padding:0;font-family:'Poppins',sans-serif;background:#f0f2f5;}
+
+/* Homepage */
+#home{
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  height:100vh;color:white;
+  background: linear-gradient(135deg, rgba(102,126,234,0.7), rgba(118,75,162,0.7)),
+              url('https://image-static.collegedunia.com/public/college_data/images/campusimage/14165681363a.jpg');
+  background-size: cover; background-position: center; padding:0 20px;
+}
+#home h1{font-size:2.8em;margin-bottom:10px;text-shadow:2px 2px 10px rgba(0,0,0,0.3);}
+#home p{font-size:1.2em;margin-bottom:20px;}
+#home button{padding:15px 30px;font-size:1.2em;border:none;border-radius:50px;background:white;color:#764ba2;font-weight:600;cursor:pointer;transition:0.3s;}
+#home button:hover{background:#e0e0e0;}
+
+/* Form Page */
+#formPage{display:none;padding:30px;}
+.form-card{max-width:600px;margin:0 auto;background:white;padding:30px;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.2);}
+.form-card h2{text-align:center;margin-bottom:20px;color:#333;}
+label{display:block;margin-top:15px;font-weight:600;}
+input, select, textarea{width:100%;padding:10px;margin-top:5px;border-radius:5px;border:1px solid #ccc;}
+button{margin-top:20px;padding:10px 15px;border:none;border-radius:5px;background:#764ba2;color:white;cursor:pointer;font-weight:600;transition:0.3s;}
+button:hover{background:#667eea;}
+#savedStatus{margin-top:15px;color:green;font-weight:600;text-align:center;}
+
+/* Thank You Page */
+#thankYouPage{
+  display:none; text-align:center; color:white; padding:50px 20px;
+  background: url('https://cdn.pixabay.com/photo/2016/11/30/13/28/university-student-1872810_1280.jpg') no-repeat center center;
+  background-size: cover; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+}
+#thankYouPage h1{font-size:3em; font-weight:bold; text-shadow:2px 2px 10px rgba(0,0,0,0.5);}
+#thankYouPage p{font-size:1.5em; line-height:1.6; text-shadow:2px 2px 10px rgba(0,0,0,0.5);}
+</style>
+</head>
+<body>
+
+<!-- Homepage -->
+<div id="home">
+  <h1>Dr. Sivanthi Aditanar College of Engineering</h1>
+  <p>Student Admission Registration Form with Real-Time Auto-Save</p>
+  <button onclick="startForm()">Get Started</button>
+</div>
+
+<!-- Form Page -->
+<div id="formPage">
+  <div class="form-card">
+    <h2>Student Admission Registration Form</h2>
+    <form id="studentForm">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter full name">
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter email">
+
+      <label>Phone</label>
+      <input type="tel" id="phone" placeholder="Enter phone number">
+
+      <label>Gender</label>
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Date of Birth</label>
+      <input type="date" id="dob">
+
+      <label>Course</label>
+      <select id="course">
+        <option value="">Select Course</option>
+        <option value="CSE">CSE</option>
+        <option value="AI & DS">AI & DS</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="Mech">Mech</option>
+        <option value="Civil">Civil</option>
+      </select>
+
+      <label>Address</label>
+      <textarea id="address" placeholder="Enter address"></textarea>
+
+      <button type="button" onclick="submitForm()">Submit</button>
+      <p id="savedStatus"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Thank You Page -->
+<div id="thankYouPage">
+  <h1>Thank You!</h1>
+  <p>Thanks for choosing <strong>Dr. Sivanthi Aditanar College of Engineering</strong>!<br>All the best for your journey ahead!</p>
+</div>
+
+<script>
+function startForm(){
+  document.getElementById('home').style.display='none';
+  document.getElementById('formPage').style.display='block';
+}
+
+// Load saved data
+window.onload = function(){
+  const fields = ['name','email','phone','gender','dob','course','address'];
+  fields.forEach(f=>{
+    const val = localStorage.getItem(f);
+    if(val) document.getElementById(f).value = val;
+  });
+};
+
+// Real-time auto-save
+document.querySelectorAll('#studentForm input, #studentForm textarea, #studentForm select').forEach(elem=>{
+  elem.addEventListener('input', e=>{
+    localStorage.setItem(e.target.id, e.target.value);
+    const time = new Date().toLocaleTimeString();
+    document.getElementById('savedStatus').textContent = 'All changes saved at ' + time;
+  });
+});
+
+// Submit form - go to thank you page
+function submitForm(){
+  document.getElementById('formPage').style.display='none';
+  document.getElementById('thankYouPage').style.display='flex';
+}
+</script>
+
+</body>
+</html>
