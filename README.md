@@ -40,6 +40,12 @@
 ---
 
 ## **Setup & Usage**
-- **Clone or Download Repository:**  
-  ```bash
-  git clone https://github.com/YourUsername/SACOE-Student-Admission-Form.git
+- Clone or Download Repository  
+- Open the Project
+- Open the index.html file in any modern web browser (Chrome, Firefox, Edge).
+- Use the Form
+- Fill in the student details.
+- Data is saved automatically in real-time.
+- Click Submit to view the Thank You page.
+
+---
