@@ -1,41 +1,62 @@
-##SACOE Student Admission Registration Form – Real-Time Auto-Save
+DSACE Student Admission Registration Form – Real-Time Auto-Save
+Project Overview
 
-##Project Overview
+This project is a web-based student admission registration form for Dr. Sivanthi Aditanar College of Engineering.
 
--This project is a web-based student admission registration form for Dr. Sivanthi Aditanar College of Engineering. The form includes real-time auto-save functionality, ensuring that users don’t lose any data while filling out the form. After submission, a Thank You page confirms successful registration.
+Includes real-time auto-save functionality to prevent data loss.
 
-##Features
+Shows a Thank You page after submission confirming successful registration.
 
--Homepage: College name with a professional background and “Get Started” button.
+Fully responsive design suitable for desktops, laptops, tablets, and mobile devices.
 
--Student Registration Form: Captures Name, Email, Phone, Gender, Date of Birth, Course (CSE, AI&DS, IT, ECE, EEE, Mech, Civil), and Address.
+Features
 
--Real-Time Auto-Save: Automatically saves all input to the browser’s localStorage.
+Homepage:
 
--Thank You Page: Confirms registration with a graduation background image.
+Displays college name with professional background.
 
--Responsive Design: Works on laptops, desktops, tablets, and mobile devices.
+“Get Started” button to navigate to the form.
 
-##Technology Stack
+Student Registration Form:
 
--Frontend: HTML5, CSS3, JavaScript
+Captures Name, Email, Phone, Gender, Date of Birth, Course, and Address.
 
--Storage: Browser localStorage (no backend or database required)
+Courses include CSE, AI&DS, IT, ECE, EEE, Mech, Civil.
 
--Fonts: Google Fonts (Poppins)
+Real-Time Auto-Save:
 
-##Setup & Usage
+Automatically saves input in browser localStorage.
 
--Clone or Download the Repository
+Data persists even if the page is reloaded.
 
--Open the Project
+Thank You Page:
 
--Open the index.html file in any modern web browser (Chrome, Firefox, Edge).
+Confirms registration with a graduation background image.
 
--Use the Form
+Responsive Design:
 
--Fill in the student details.
+Works on desktops, laptops, tablets, and mobiles.
 
-Data is saved in real-time automatically.
+Technology Stack
+
+Frontend: HTML5, CSS3, JavaScript
+
+Storage: Browser localStorage (no backend required)
+
+Fonts: Google Fonts (Poppins)
+
+Setup & Usage
+
+Clone or Download Repository
+
+Open the Project:
+
+Open the index.html file in any modern web browser (Chrome, Firefox, Edge).
+
+Use the Form:
+
+Fill in the student details.
+
+Data is saved automatically in real-time.
 
 Click Submit to view the Thank You page.
